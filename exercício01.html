@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 1 Avaliação Javascript</title>
+</head>
+<body>
+  <!-- Cria uma tag script, para conter o vosso código javascript; -->
+  <script>
+   
+   // Copia para o ficheiro o seguinte array: 
+    var paises = ['Albânia','Bolívia','Canadá','Dinamarca','Etiópia','Finlândia','Alemanha','Hungria','Irlanda','Japão','Quênia']
+
+    // Cria um ciclo que faça console.log de cada um dos países;
+      for(var n = 0; n < paises.length; n++) {
+        console.log(paises[n]);
+      }
+
+    // Cria uma função que devolve o número de itens do array países;
+    console.log(paises.length)
+
+    // Adiciona à primeira posição do array o país Portugal;
+    paises.unshift('Portugal')
+    console.log(paises)
+
+    // Adiciona à última posição do array o país Espanha;
+    paises.push('Espanha')
+    console.log(paises)
+
+    // Faz console.log dos 3 últimos itens do array, usando apenas uma função;
+    console.log(paises.slice(-3))
+
+    // Faz console.log de todos os países numa só string separado por “ - “ (espaço hífen espaço);
+    console.log(paises.join(" - "))
+
+  </script>
+</body>
+</html>

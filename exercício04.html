@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício Javascript da aula 04/12/2023</title>
+</head>
+<body>
+  <!-- Cria uma tag script, para conter o vosso código javascript -->
+  <script>
+    // Cria uma função anónima que seja logo executada, e que faça console.log da string isto foi demasiado rápido!;
+    (function () {
+      console.log("isto foi demasiado rápido!");
+    })();
+
+    /*Cria uma closure que construa campos de um formulário. Na primeira função devemos passar o nome do campo, e na segunda função devemos passar o resultado. Deverá gerar algo como: Nome: Vitor */
+    function formulario(nomeCampo) {
+      return function(resultadoCampo) {
+        return nomeCampo + ": " + resultadoCampo;
+      };
+    }
+
+    var formularioNome = formulario("Nome")("Renato");
+    console.log(formularioNome);
+    
+    // Cria uma função construtora relativa a um produto que tenha um nome e um valor à escolha. O nome é string e o valor um número;
+    function Produto(descricao, preco) {
+      this.descricao = descricao;
+      this.preco = preco;
+    }
+
+    const produtoNovo = new Produto("Carro", 2);
+    console.log(produtoNovo);
+
+    // Altera o valor deste produto para 2.5;
+
+    produtoNovo.preco = 2.5;
+    console.log(produtoNovo);
+
+    // Faz console.log do valor do produto convertido num número inteiro.
+
+    console.log(parseInt(produtoNovo.preco));
+
+  </script>
+</body>
+</html>
